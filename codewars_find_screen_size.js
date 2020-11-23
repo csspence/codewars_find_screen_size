@@ -5,6 +5,7 @@ The Challenge
 Given an integer width and a string ratio written as WIDTH:HEIGHT, output the screen dimensions as a string written as WIDTHxHEIGHT.
 */
 
-function findScreenHeight(width, ratio) {
-    // Happy coding :)
+const findScreenHeight = (width, ratio) => {
+    let array = ratio.split(':');
+    return width + 'x' + (width / Number(array[0])) * Number(array[1]);
 }
